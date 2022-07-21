@@ -3,7 +3,7 @@ import Card from "./Card";
 
 
 function Container ({ hogs }) {
-    // console.log(hogs)
+    console.log(hogs)
     return (
         <div className="ui grid container">
             <Card hogs={hogs}/>
