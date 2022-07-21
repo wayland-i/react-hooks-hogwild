@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Stats from "./Stats";
 
 
 function Card({ hogs }) {
@@ -28,7 +29,7 @@ function Card({ hogs }) {
 
     // if (isHidden) return null;
 
-    const {name, specialty, image} = hogs;
+    // const {name, specialty, image} = hogs;
     
     const getHogs = () => hogs.map((hog) => {
 
@@ -38,11 +39,7 @@ function Card({ hogs }) {
             <div className="ui eight wide column" key={hog.name}>
                 <p>{hog.name}</p>
                 <img onClick={handleStatsClick}src={hog.image} alt="pigture"></img>
-                <div className="content" >
-                    <h1 className="header">{name}</h1>
-                    <div className="description">Specialty: {specialty}</div>
-                    
-                </div>
+                
                 {showStats ? "front" : "back"}
             </div>
         )
